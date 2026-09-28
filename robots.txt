@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /traitement.php
+Disallow: /mentions-legales.html
+Sitemap: https://art-du-transfert.fr/sitemap.xml

@@ -1,0 +1,16 @@
+# Outils / notes de travail
+.claude/
+_contenu-art-du-transfert/
+
+# Anciens fichiers MD VTC (ne pas publier)
+logo/md-*.pdf
+logo/md-svg.svg
+logo/mdvtc*
+logo/img-form.webp
+
+# Images de services retirés (garde du corps, Sprinter, Maybach, Range Rover)
+bodyguard*.webp
+sprinter.webp
+maybach.webp
+mercedes-meybach.webp
+range-rover.webp
