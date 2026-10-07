@@ -606,113 +606,127 @@
             <div class="image-container">
                 <img src="./logo/lart-du-transfert-dore-300.webp" alt="L'Art du Transfert chauffeur privé Paris" title="L'Art du Transfert" loading="lazy" decoding="async">
             </div>
-            <form id="contactForm2" onsubmit="return sendBoth(event)">
-                <!-- Honeypot anti-spam -->
+            <form id="contactForm2" action="https://webprime.app/webhook/contact/122df4dd24c7aa04f24c69896a1f8dae76427f45d6d30b6a4fad8a621d08f224" method="POST" onsubmit="return sendBoth(event)">
                 <div class="hp-wrap">
                     <label for="website2">Votre site web :</label>
                     <input type="text" id="website2" name="_honey" autocomplete="off">
                 </div>
 
-                <label for="name2">Nom / Prénom</label>
-                <input type="text" id="name2" name="nom" required pattern="[A-Za-zÀ-ÿ' -]{2,60}" title="Indiquez votre nom (lettres uniquement, 2 à 60 caractères)">
+                <div class="form-progress">
+                    <div class="form-progress-bar"><span id="formProgressFill2"></span></div>
+                    <div class="form-progress-label">Étape <span id="formStepNum2">1</span>/3 &middot; <span id="formStepName2">Votre trajet</span></div>
+                </div>
 
-                <label for="tel2">Téléphone :</label>
-                <input type="tel" id="tel2" name="tel" pattern="^((\+33|0)[1679])[0-9]{8}$" maxlength="12" required>
-
-                <label for="email2">Email</label>
-                <input type="email" id="email2" name="email" required>
-
-                <label for="prestation2">Prestation</label>
-                <select id="prestation2" name="prestation">
-                    <option value="Transfert aeroport">Transfert aéroport</option>
-                    <option value="Mise a disposition">Mise à disposition</option>
-                    <option value="Deplacement pro">Déplacement professionnel</option>
-                    <option value="Trajet Prive">Trajet Privé</option>
-                    <option value="Chauffeur Sec">Chauffeur Sec</option>
-                    <option value="Mariage">Mariage</option>
-                    <option value="Longue distance">Longue distance / Europe</option>
+                <div class="form-step" data-name="Votre trajet">
+                    <label for="prestation2">Prestation</label>
+                    <select id="prestation2" name="prestation">
+                        <option value="Transfert aeroport">Transfert aéroport</option>
+                        <option value="Mise a disposition">Mise à disposition</option>
+                        <option value="Deplacement pro">Déplacement professionnel</option>
+                        <option value="Trajet Prive">Trajet Privé</option>
+                        <option value="Chauffeur Sec">Chauffeur Sec</option>
+                        <option value="Mariage">Mariage</option>
+                        <option value="Longue distance">Longue distance / Europe</option>
                         <option value="Tourisme">Tourisme</option>
-                    <option value="Autre">Autre</option>
-                </select>
+                        <option value="Autre">Autre</option>
+                    </select>
 
-                <label for="departure2">Départ</label>
-                <input type="text" id="departure2" name="lieu_depart" required>
+                    <label for="departure2">Départ</label>
+                    <input type="text" id="departure2" name="lieu_depart" required>
 
-                <label for="arrival2">Arrivée</label>
-                <input type="text" id="arrival2" name="lieu_arrivee" required>
+                    <label for="arrival2">Arrivée</label>
+                    <input type="text" id="arrival2" name="lieu_arrivee" required>
 
-                <label for="numero2">Numéro de vol ou train</label>
-                <input type="text" id="numero2" name="numero">
+                    <label for="numero2">Numéro de vol ou train</label>
+                    <input type="text" id="numero2" name="numero">
 
-                <div class="inline-container">
-                    <div class="inline-item">
-                        <label for="date2">Date</label>
-                        <input type="date" id="date2" name="date" required>
-                    </div>
-                    <div class="inline-item">
-                        <label for="heure2">Heure</label>
-                        <input type="time" id="heure2" name="heure" required>
-                    </div>
-                </div>
-
-                <div class="inline-container">
-                    <div class="inline-item">
-                        <label for="passengers2">Adultes</label>
-                        <select id="passengers2" name="passagers">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                        </select>
-                    </div>
-                    <div class="inline-item">
-                        <label for="children2">Enfants</label>
-                        <select id="children2" name="enfants">
-                            <option value="0">0</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                        </select>
+                    <div class="inline-container">
+                        <div class="inline-item">
+                            <label for="date2">Date</label>
+                            <input type="date" id="date2" name="date" required>
+                        </div>
+                        <div class="inline-item">
+                            <label for="heure2">Heure</label>
+                            <input type="time" id="heure2" name="heure" required>
+                        </div>
                     </div>
                 </div>
 
-                <div class="inline-container">
-                    <div class="inline-item">
-                        <label for="luggage2">Bagages</label>
-                        <select id="luggage2" name="bagages">
-                            <option value="0">0</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                        </select>
+                <div class="form-step" data-name="Passagers &amp; bagages">
+                    <div class="inline-container">
+                        <div class="inline-item">
+                            <label for="passengers2">Adultes</label>
+                            <select id="passengers2" name="passagers">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                            </select>
+                        </div>
+                        <div class="inline-item">
+                            <label for="children2">Enfants</label>
+                            <select id="children2" name="enfants">
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                            </select>
+                        </div>
                     </div>
-                    <div class="inline-item">
-                        <label for="car-seats2">Sièges auto</label>
-                        <select id="car-seats2" name="sieges_auto">
-                            <option value="0">0</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                        </select>
-                    </div>
-                    <div class="inline-item">
-                        <label for="rehausseur2">Rehausseur</label>
-                        <select id="rehausseur2" name="rehausseur">
-                            <option value="0">0</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                        </select>
+
+                    <div class="inline-container">
+                        <div class="inline-item">
+                            <label for="luggage2">Bagages</label>
+                            <select id="luggage2" name="bagages">
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                            </select>
+                        </div>
+                        <div class="inline-item">
+                            <label for="car-seats2">Sièges auto</label>
+                            <select id="car-seats2" name="sieges_auto">
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                            </select>
+                        </div>
+                        <div class="inline-item">
+                            <label for="rehausseur2">Rehausseur</label>
+                            <select id="rehausseur2" name="rehausseur">
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
 
-                <label for="comments2">Commentaires</label>
-                <textarea id="comments2" name="commentaires" rows="4"></textarea>
+                <div class="form-step" data-name="Vos coordonnées">
+                    <label for="name2">Nom / Prénom</label>
+                    <input type="text" id="name2" name="nom" required pattern="[A-Za-zÀ-ÿ' -]{2,60}" title="Indiquez votre nom (lettres uniquement, 2 à 60 caractères)">
 
-                <button type="submit">ENVOYER</button>
+                    <label for="tel2">Téléphone :</label>
+                    <input type="tel" id="tel2" name="tel" pattern="^((\+33|0)[1679])[0-9]{8}$" maxlength="12" required>
+
+                    <label for="email2">Email</label>
+                    <input type="email" id="email2" name="email" required>
+
+                    <label for="comments2">Commentaires</label>
+                    <textarea id="comments2" name="commentaires" rows="4"></textarea>
+                </div>
+
+                <div class="form-nav">
+                    <button type="button" class="form-prev" id="formPrev2">Précédent</button>
+                    <button type="button" class="form-next" id="formNext2">Suivant</button>
+                    <button type="submit" class="form-submit" id="formSubmit2">ENVOYER</button>
+                </div>
             </form>
             <div class="contact-thanks" style="display:none; padding: 30px 20px; background-color: #111111; border: 2px solid #c9a24e; border-radius: 8px; text-align: center; margin-top: 20px;">
                 <h3 style="color: #e3c27a; margin: 0 0 10px 0;">Merci pour votre demande !</h3>
@@ -898,17 +912,17 @@
         </a>
     </nav>
     <script>
-    (function(){
-        var form = document.getElementById('contactForm');
+    ['contactForm', 'contactForm2'].forEach(function(formId){
+        var form = document.getElementById(formId);
         if(!form) return;
         var steps = [].slice.call(form.querySelectorAll('.form-step'));
         if(steps.length < 2) return;
-        var prev = form.querySelector('#formPrev'),
-            next = form.querySelector('#formNext'),
-            submit = form.querySelector('#formSubmit'),
-            fill = form.querySelector('#formProgressFill'),
-            snum = form.querySelector('#formStepNum'),
-            sname = form.querySelector('#formStepName');
+        var prev = form.querySelector('.form-prev'),
+            next = form.querySelector('.form-next'),
+            submit = form.querySelector('.form-submit'),
+            fill = form.querySelector('.form-progress-bar span'),
+            snum = form.querySelector('[id^="formStepNum"]'),
+            sname = form.querySelector('[id^="formStepName"]');
         var cur = 0;
         function show(i){
             cur = i;
@@ -933,7 +947,7 @@
         if(next) next.addEventListener('click', function(){ if(valid(cur)) show(Math.min(cur + 1, steps.length - 1)); });
         if(prev) prev.addEventListener('click', function(){ show(Math.max(cur - 1, 0)); });
         show(0);
-    })();
+    });
     </script>
 </body>
 
