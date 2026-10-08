@@ -468,7 +468,7 @@
                     <input type="text" id="name" name="nom" required pattern="[A-Za-zÀ-ÿ' -]{2,60}" title="Indiquez votre nom (lettres uniquement, 2 à 60 caractères)">
 
                     <label for="tel">Téléphone :</label>
-                    <input type="tel" id="tel" name="tel" pattern="^((\+33|0)[1679])[0-9]{8}$" maxlength="12" required>
+                    <input type="tel" id="tel" name="tel" pattern="(?:0[1-9](?:[ .\-]?\d{2}){4}|(?:\+|00)(?:1|32|33|34|39|41|44|49)(?:[ .\(\)\-]{0,2}\d){6,13})" maxlength="20" inputmode="tel" title="Numéro français (06 12 34 56 78) ou international : Espagne +34, Italie +39, Royaume-Uni +44, États-Unis +1, Belgique +32, Suisse +41, Allemagne +49" required>
 
                     <label for="email">Email</label>
                     <input type="email" id="email" name="email" required>
