@@ -54,7 +54,7 @@ textarea{width:94%;padding:8px;margin-bottom:15px;border:1px solid #d4d4d4;backg
 .image-container img{width:clamp(150px, 30%, 250px);height:auto;border-radius:20px}
 .inline-container{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;width:100%}
 .inline-item{display:flex;flex-direction:column;width:48%}
-.inline-container:has(.inline-item:nth-child(3)) .inline-item{width:31%}
+.inline-container:has(.inline-item:nth-child(3)) .inline-item{width:31%;justify-content:flex-end}
 .service-prive img{width:70%;height:280px;margin-bottom:5%;object-fit:cover;border-radius:20px}
 .service-prive{margin-top:5%;margin-bottom:5%;display:flex;justify-content:center}
 .services-pc{display:flex;justify-content:center;margin-top:5%;margin-bottom:5%;gap:10%}

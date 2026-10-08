@@ -401,8 +401,12 @@
                             <input type="date" id="date" name="date" required>
                         </div>
                         <div class="inline-item">
-                            <label for="heure">Heure</label>
+                            <label for="heure">Prise en charge</label>
                             <input type="time" id="heure" name="heure" required>
+                        </div>
+                        <div class="inline-item">
+                            <label for="heure_fin">Heure de fin (facultatif)</label>
+                            <input type="time" id="heure_fin" name="heure_fin">
                         </div>
                     </div>
                 </div>
@@ -613,6 +617,7 @@
         var numero = (form.querySelector('[name="numero"]') || {}).value || '';
         var date = (form.querySelector('[name="date"]') || {}).value || '';
         var heure = (form.querySelector('[name="heure"]') || {}).value || '';
+        var heureFin = (form.querySelector('[name="heure_fin"]') || {}).value || '';
         var passagers = (form.querySelector('[name="passagers"]') || {}).value || '';
         var enfants = (form.querySelector('[name="enfants"]') || {}).value || '';
         var bagages = (form.querySelector('[name="bagages"]') || {}).value || '';
@@ -629,6 +634,7 @@
             + '\nArrivee : ' + arrivee
             + '\nNumero de vol/train : ' + numero
             + '\nDate : ' + date + ' a ' + heure
+            + (heureFin ? '\nHeure de fin prevue : ' + heureFin : '')
             + '\nPassagers : ' + passagers + ' adulte(s), ' + enfants + ' enfant(s)'
             + '\nBagages : ' + bagages + ' | Sieges auto : ' + sieges + ' | Rehausseur : ' + rehausseur
             + '\n\nCommentaires : ' + commentaires;
