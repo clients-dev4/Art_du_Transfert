@@ -210,8 +210,8 @@
     </header>
     <main>
         <div class="img-index">
-            <img src="van-classe-v-hero.webp" alt="van Mercedes Classe V avec chauffeur" class="background-image">
-            <h1><i>Van avec Chauffeur Paris<br>Mercedes Classe V<br>jusqu'à 7 passagers</i></h1>
+            <img src="van-classe-v-hero.webp" alt="chauffeur privé Mercedes à Paris, berline et van" class="background-image">
+            <h1><i>Chauffeur Privé à Paris<br>Berlines &amp; Vans Mercedes<br>Classe E, S et V</i></h1>
             <a class="bouton-1" href="contact.html" title="chauffeur privé">RÉSERVATION</a>
         </div>
         <section class="stats" aria-label="L'Art du Transfert en chiffres">
@@ -250,10 +250,10 @@
                         <option value="Autre">Autre</option>
                     </select>
 
-                    <label for="departure1">Départ</label>
+                    <label for="departure1">Départ (adresse de prise en charge)</label>
                     <input type="text" id="departure1" name="lieu_depart" required>
 
-                    <label for="arrival1">Arrivée</label>
+                    <label for="arrival1">Arrivée (fin de prise en charge, dépose)</label>
                     <input type="text" id="arrival1" name="lieu_arrivee" required>
 
                     <label for="numero">Numéro de vol ou train</label>
@@ -308,6 +308,11 @@
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
                             </select>
                         </div>
                         <div class="inline-item">
@@ -336,7 +341,7 @@
                     <input type="text" id="name" name="nom" required pattern="[A-Za-zÀ-ÿ' -]{2,60}" title="Indiquez votre nom (lettres uniquement, 2 à 60 caractères)">
 
                     <label for="tel">Téléphone :</label>
-                    <input type="tel" id="tel" name="tel" pattern="(?:0[1-9](?:[ .\-]?\d{2}){4}|(?:\+|00)(?:1|32|33|34|39|41|44|49)(?:[ .\(\)\-]{0,2}\d){6,13})" maxlength="20" inputmode="tel" title="Numéro français (06 12 34 56 78) ou international : Espagne +34, Italie +39, Royaume-Uni +44, États-Unis +1, Belgique +32, Suisse +41, Allemagne +49" required>
+                    <input type="tel" id="tel" name="tel" pattern="(?:0[1-9](?:[ .\-]?\d{2}){4}|(?:\+|00)[ .]?[1-9](?:[ .\(\)\-]{0,2}\d){6,16})" maxlength="25" inputmode="tel" title="Numéro français (06 12 34 56 78) ou étranger avec l’indicatif du pays (+34, +44, +1, +212, +971…)" required>
 
                     <label for="email">Email</label>
                     <input type="email" id="email" name="email" required>
@@ -417,6 +422,7 @@
         </div>
         <div class="texte1">
             <p>Tarifs forfaitaires par trajet, valables dans les deux sens pour les aéroports : suivi de vol, accueil pancarte et bagages inclus, sans majoration de nuit. Mariages et trajets longue distance (France, Bruxelles, Genève, Londres…) : sur devis personnalisé.</p>
+            <p><strong>Attente incluse</strong> : 1 h 15 à l'aéroport après l'heure d'atterrissage, 25 minutes en gare après l'heure d'arrivée du train. Au-delà de ce délai, un supplément de <strong>70 €</strong> s'ajoute au prix initial. En <strong>mise à disposition</strong>, toute heure entamée au-delà de 15 minutes est facturée en heure entière.</p>
         </div>
         <a class="bouton-3" href="contact.html" title="réserver un van avec chauffeur">RÉSERVER</a>
         <section>
@@ -532,7 +538,8 @@
                     de plus de douze ans d'expérience sur les routes d'Île-de-France et d'Europe. Plus de
                     15 000 trajets réalisés et une note moyenne de 4,9/5 témoignent de leur sérieux.</p>
                 <p>Le prix est fixé à la réservation et ne bouge plus : aucune majoration de nuit, aucun frais
-                    caché, aucun supplément pour une attente raisonnable. Nos vans et berlines Mercedes récents sont
+                    caché. L'attente est incluse dans les limites annoncées dans
+                    <a href="index.html#tarifs">nos tarifs</a>. Nos vans et berlines Mercedes récents sont
                     contrôlés régulièrement, entièrement assurés et disponibles 24h/24, 7j/7.</p>
             </div>
         </section>
@@ -629,10 +636,10 @@
                         <option value="Autre">Autre</option>
                     </select>
 
-                    <label for="departure2">Départ</label>
+                    <label for="departure2">Départ (adresse de prise en charge)</label>
                     <input type="text" id="departure2" name="lieu_depart" required>
 
-                    <label for="arrival2">Arrivée</label>
+                    <label for="arrival2">Arrivée (fin de prise en charge, dépose)</label>
                     <input type="text" id="arrival2" name="lieu_arrivee" required>
 
                     <label for="numero2">Numéro de vol ou train</label>
@@ -687,6 +694,11 @@
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
                             </select>
                         </div>
                         <div class="inline-item">
@@ -715,7 +727,7 @@
                     <input type="text" id="name2" name="nom" required pattern="[A-Za-zÀ-ÿ' -]{2,60}" title="Indiquez votre nom (lettres uniquement, 2 à 60 caractères)">
 
                     <label for="tel2">Téléphone :</label>
-                    <input type="tel" id="tel2" name="tel" pattern="(?:0[1-9](?:[ .\-]?\d{2}){4}|(?:\+|00)(?:1|32|33|34|39|41|44|49)(?:[ .\(\)\-]{0,2}\d){6,13})" maxlength="20" inputmode="tel" title="Numéro français (06 12 34 56 78) ou international : Espagne +34, Italie +39, Royaume-Uni +44, États-Unis +1, Belgique +32, Suisse +41, Allemagne +49" required>
+                    <input type="tel" id="tel2" name="tel" pattern="(?:0[1-9](?:[ .\-]?\d{2}){4}|(?:\+|00)[ .]?[1-9](?:[ .\(\)\-]{0,2}\d){6,16})" maxlength="25" inputmode="tel" title="Numéro français (06 12 34 56 78) ou étranger avec l’indicatif du pays (+34, +44, +1, +212, +971…)" required>
 
                     <label for="email2">Email</label>
                     <input type="email" id="email2" name="email" required>

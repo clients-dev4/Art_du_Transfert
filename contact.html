@@ -129,7 +129,7 @@
                 "name": "Le prix peut-il changer après la réservation ?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Non. Le tarif communiqué à la réservation est définitif : pas de majoration de nuit, pas de frais cachés et pas de supplément pour une attente raisonnable."
+                    "text": "Non. Le tarif communiqué à la réservation est définitif : pas de majoration de nuit et pas de frais cachés. Seules deux situations donnent lieu à un supplément : une attente de plus de 1 h 15 à l'aéroport ou de plus de 25 minutes en gare (70 €), et en mise à disposition toute heure entamée au-delà de 15 minutes, facturée en heure entière."
                 }
             },
             {
@@ -137,7 +137,7 @@
                 "name": "Que se passe-t-il si mon vol a du retard ?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Votre chauffeur suit votre vol en temps réel et adapte l'heure de prise en charge, sans frais supplémentaires. Il vous attend en zone d'arrivée avec une pancarte à votre nom."
+                    "text": "Votre chauffeur suit votre vol en temps réel et adapte l'heure de prise en charge, sans frais supplémentaires. Il vous attend en zone d'arrivée avec une pancarte à votre nom. À partir de l'heure réelle d'atterrissage, 1 h 15 d'attente est incluse ; au-delà, un supplément de 70 € s'applique."
                 }
             },
             {
@@ -227,10 +227,10 @@
                         <option value="Autre">Autre</option>
                     </select>
 
-                    <label for="departure1">Départ</label>
+                    <label for="departure1">Départ (adresse de prise en charge)</label>
                     <input type="text" id="departure1" name="lieu_depart" required>
 
-                    <label for="arrival1">Arrivée</label>
+                    <label for="arrival1">Arrivée (fin de prise en charge, dépose)</label>
                     <input type="text" id="arrival1" name="lieu_arrivee" required>
 
                     <label for="numero">Numéro de vol ou train</label>
@@ -285,6 +285,11 @@
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
                             </select>
                         </div>
                         <div class="inline-item">
@@ -313,7 +318,7 @@
                     <input type="text" id="name" name="nom" required pattern="[A-Za-zÀ-ÿ' -]{2,60}" title="Indiquez votre nom (lettres uniquement, 2 à 60 caractères)">
 
                     <label for="tel">Téléphone :</label>
-                    <input type="tel" id="tel" name="tel" pattern="(?:0[1-9](?:[ .\-]?\d{2}){4}|(?:\+|00)(?:1|32|33|34|39|41|44|49)(?:[ .\(\)\-]{0,2}\d){6,13})" maxlength="20" inputmode="tel" title="Numéro français (06 12 34 56 78) ou international : Espagne +34, Italie +39, Royaume-Uni +44, États-Unis +1, Belgique +32, Suisse +41, Allemagne +49" required>
+                    <input type="tel" id="tel" name="tel" pattern="(?:0[1-9](?:[ .\-]?\d{2}){4}|(?:\+|00)[ .]?[1-9](?:[ .\(\)\-]{0,2}\d){6,16})" maxlength="25" inputmode="tel" title="Numéro français (06 12 34 56 78) ou étranger avec l’indicatif du pays (+34, +44, +1, +212, +971…)" required>
 
                     <label for="email">Email</label>
                     <input type="email" id="email" name="email" required>
@@ -349,8 +354,10 @@
             <h2>UN PRIX CLAIR, SANS SURPRISE</h2>
             <div class="texte1">
                 <p>Le montant convenu à la réservation est celui que vous réglez. Pas de majoration de nuit, pas de
-                    frais cachés, pas de supplément pour une attente raisonnable. Pour les transferts aéroport, votre
-                    chauffeur suit votre vol et s'adapte à un éventuel retard sans rien vous facturer de plus.</p>
+                    frais cachés. Pour les transferts aéroport, votre chauffeur suit votre vol et s'adapte à un
+                    éventuel retard sans rien vous facturer de plus : 1 h 15 d'attente est incluse après l'heure
+                    réelle d'atterrissage, et 25 minutes en gare après l'arrivée du train. Au-delà de ce délai, un
+                    supplément de 70 € s'ajoute au prix initial.</p>
                 <p>À signaler lors de la demande : sièges bébé et rehausseurs sont fournis gratuitement pour vos
                     enfants.</p>
             </div>
@@ -393,14 +400,14 @@
             <input type="checkbox" id="faq3">
             <label for="faq3">Le prix peut-il changer après la réservation ?</label>
             <div class="faq-answer">
-                <p>Non. Le tarif communiqué à la réservation est définitif : pas de majoration de nuit, pas de frais cachés et pas de supplément pour une attente raisonnable.</p>
+                <p>Non. Le tarif communiqué à la réservation est définitif : pas de majoration de nuit et pas de frais cachés. Seules deux situations donnent lieu à un supplément : une attente de plus de 1 h 15 à l'aéroport ou de plus de 25 minutes en gare (70 €), et en mise à disposition toute heure entamée au-delà de 15 minutes, facturée en heure entière.</p>
             </div>
         </div>
         <div class="faq-item">
             <input type="checkbox" id="faq4">
             <label for="faq4">Que se passe-t-il si mon vol a du retard ?</label>
             <div class="faq-answer">
-                <p>Votre chauffeur suit votre vol en temps réel et adapte l'heure de prise en charge, sans frais supplémentaires. Il vous attend en zone d'arrivée avec une pancarte à votre nom.</p>
+                <p>Votre chauffeur suit votre vol en temps réel et adapte l'heure de prise en charge, sans frais supplémentaires. Il vous attend en zone d'arrivée avec une pancarte à votre nom. À partir de l'heure réelle d'atterrissage, 1 h 15 d'attente est incluse ; au-delà, un supplément de 70 € s'applique.</p>
             </div>
         </div>
         <div class="faq-item">

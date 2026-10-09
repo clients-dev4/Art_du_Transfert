@@ -255,6 +255,9 @@
         <div class="texte1">
             <p>Chauffeur et véhicule réservés pour la durée choisie. Pour plusieurs jours ou un programme sur mesure,
                 demandez un devis.</p>
+            <p><strong>Heure entamée</strong> : au-delà de 15 minutes, toute heure commencée est facturée en heure
+                entière. Exemple : 3 h 10 de mise à disposition restent facturées 3 heures, 3 h 20 sont facturées
+                4 heures.</p>
         </div>
         <a class="bouton-3" href="contact.html" title="réserver mise à disposition">RÉSERVER</a>
         <h2>RÉSERVATION</h2>
@@ -287,10 +290,10 @@
                         <option value="Autre">Autre</option>
                     </select>
 
-                    <label for="departure1">Départ</label>
+                    <label for="departure1">Départ (adresse de prise en charge)</label>
                     <input type="text" id="departure1" name="lieu_depart" required>
 
-                    <label for="arrival1">Arrivée</label>
+                    <label for="arrival1">Arrivée (fin de prise en charge, dépose)</label>
                     <input type="text" id="arrival1" name="lieu_arrivee" required>
 
                     <label for="numero">Numéro de vol ou train</label>
@@ -345,6 +348,11 @@
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
                             </select>
                         </div>
                         <div class="inline-item">
@@ -373,7 +381,7 @@
                     <input type="text" id="name" name="nom" required pattern="[A-Za-zÀ-ÿ' -]{2,60}" title="Indiquez votre nom (lettres uniquement, 2 à 60 caractères)">
 
                     <label for="tel">Téléphone :</label>
-                    <input type="tel" id="tel" name="tel" pattern="(?:0[1-9](?:[ .\-]?\d{2}){4}|(?:\+|00)(?:1|32|33|34|39|41|44|49)(?:[ .\(\)\-]{0,2}\d){6,13})" maxlength="20" inputmode="tel" title="Numéro français (06 12 34 56 78) ou international : Espagne +34, Italie +39, Royaume-Uni +44, États-Unis +1, Belgique +32, Suisse +41, Allemagne +49" required>
+                    <input type="tel" id="tel" name="tel" pattern="(?:0[1-9](?:[ .\-]?\d{2}){4}|(?:\+|00)[ .]?[1-9](?:[ .\(\)\-]{0,2}\d){6,16})" maxlength="25" inputmode="tel" title="Numéro français (06 12 34 56 78) ou étranger avec l’indicatif du pays (+34, +44, +1, +212, +971…)" required>
 
                     <label for="email">Email</label>
                     <input type="email" id="email" name="email" required>

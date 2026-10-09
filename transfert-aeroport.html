@@ -115,7 +115,7 @@
                 "name": "Mon avion arrive en retard, que se passe-t-il ?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Rien de votre côté : nous suivons votre vol en direct et votre chauffeur décale son arrivée en fonction de l'heure réelle d'atterrissage, sans frais supplémentaires."
+                    "text": "Rien de votre côté : nous suivons votre vol en direct et votre chauffeur décale son arrivée en fonction de l'heure réelle d'atterrissage, sans frais supplémentaires. À partir de cet horaire réel, 1 h 15 d'attente est incluse ; au-delà, un supplément de 70 € s'ajoute au prix du transfert."
                 }
             },
             {
@@ -258,7 +258,12 @@
         </div>
         <div class="texte1">
             <p>Prix forfaitaires valables dans les deux sens (Paris vers l'aéroport ou aéroport vers Paris), suivi de vol
-                et accueil personnalisé inclus, sans majoration de nuit ni supplément en cas de retard de votre avion.</p>
+                et accueil personnalisé inclus, sans majoration de nuit.</p>
+            <p><strong>Attente incluse à l'aéroport</strong> : 1 h 15 après l'heure réelle d'atterrissage, de quoi
+                couvrir le débarquement, les contrôles et la récupération des bagages. Au-delà de ce délai, un
+                supplément de <strong>70 €</strong> s'ajoute au prix initial du transfert.
+                <strong>En gare</strong>, l'attente incluse est de 25 minutes après l'heure d'arrivée du train, puis
+                le même supplément de <strong>70 €</strong> s'applique.</p>
         </div>
         <a class="bouton-3" href="contact.html" title="réserver transfert aéroport">RÉSERVER</a>
         <h2>RÉSERVATION</h2>
@@ -291,10 +296,10 @@
                         <option value="Autre">Autre</option>
                     </select>
 
-                    <label for="departure1">Départ</label>
+                    <label for="departure1">Départ (adresse de prise en charge)</label>
                     <input type="text" id="departure1" name="lieu_depart" required>
 
-                    <label for="arrival1">Arrivée</label>
+                    <label for="arrival1">Arrivée (fin de prise en charge, dépose)</label>
                     <input type="text" id="arrival1" name="lieu_arrivee" required>
 
                     <label for="numero">Numéro de vol ou train</label>
@@ -349,6 +354,11 @@
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
                             </select>
                         </div>
                         <div class="inline-item">
@@ -377,7 +387,7 @@
                     <input type="text" id="name" name="nom" required pattern="[A-Za-zÀ-ÿ' -]{2,60}" title="Indiquez votre nom (lettres uniquement, 2 à 60 caractères)">
 
                     <label for="tel">Téléphone :</label>
-                    <input type="tel" id="tel" name="tel" pattern="(?:0[1-9](?:[ .\-]?\d{2}){4}|(?:\+|00)(?:1|32|33|34|39|41|44|49)(?:[ .\(\)\-]{0,2}\d){6,13})" maxlength="20" inputmode="tel" title="Numéro français (06 12 34 56 78) ou international : Espagne +34, Italie +39, Royaume-Uni +44, États-Unis +1, Belgique +32, Suisse +41, Allemagne +49" required>
+                    <input type="tel" id="tel" name="tel" pattern="(?:0[1-9](?:[ .\-]?\d{2}){4}|(?:\+|00)[ .]?[1-9](?:[ .\(\)\-]{0,2}\d){6,16})" maxlength="25" inputmode="tel" title="Numéro français (06 12 34 56 78) ou étranger avec l’indicatif du pays (+34, +44, +1, +212, +971…)" required>
 
                     <label for="email">Email</label>
                     <input type="email" id="email" name="email" required>
@@ -411,7 +421,7 @@
             <input type="checkbox" id="faq2">
             <label for="faq2">Mon avion arrive en retard, que se passe-t-il ?</label>
             <div class="faq-answer">
-                <p>Rien de votre côté : nous suivons votre vol en direct et votre chauffeur décale son arrivée en fonction de l'heure réelle d'atterrissage, sans frais supplémentaires.</p>
+                <p>Rien de votre côté : nous suivons votre vol en direct et votre chauffeur décale son arrivée en fonction de l'heure réelle d'atterrissage, sans frais supplémentaires. À partir de cet horaire réel, 1 h 15 d'attente est incluse ; au-delà, un supplément de 70 € s'ajoute au prix du transfert.</p>
             </div>
         </div>
         <div class="faq-item">
