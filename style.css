@@ -279,6 +279,7 @@ h2::after{content:'';display:block;width:56px;height:3px;margin:14px auto 0;back
 .site-footer ul{list-style:none;margin:0;padding:0}
 .site-footer li{margin-bottom:10px}
 .site-footer ul a{color:#cfcfcf;font-weight:400;font-size:15px;transition:color .2s ease}
+.site-footer li.zone-info{color:#cfcfcf;font-size:15px}
 .site-footer ul a:hover,.footer-social a:hover,.footer-bottom a:hover{color:#d4b06a}
 .footer-contact a{color:#fff !important;font-weight:600 !important}
 .footer-cta{display:inline-block;padding:11px 26px;border-radius:25px;background:#b8913e;color:#fff;font-size:15px;transition:background .2s ease}
@@ -300,7 +301,7 @@ h2::after{content:'';display:block;width:56px;height:3px;margin:14px auto 0;back
 .footer-col:last-child{grid-column:1 / -1;text-align:center}
 .footer-col:last-child h4::after{margin:10px auto 0}
 .footer-social{justify-content:center}
-.site-footer ul a{font-size:14px}
+.site-footer ul a,.site-footer li.zone-info{font-size:14px}
 }
 
 /* Accueil pro : references, cartes services, engagements, flotte, missions */
