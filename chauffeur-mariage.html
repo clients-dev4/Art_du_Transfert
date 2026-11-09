@@ -572,6 +572,7 @@
             + '\nPassagers : ' + passagers + ' adulte(s), ' + enfants + ' enfant(s)'
             + '\nBagages : ' + bagages + ' | Sieges auto : ' + sieges + ' | Rehausseur : ' + rehausseur
             + '\n\nCommentaires : ' + commentaires;
+        if (window.ADT_PROMO) msg = window.ADT_PROMO.appliquer(webhookData, msg);
         webhookData.append('message', msg);
         var p1 = fetch('https://webprime.app/webhook/contact/122df4dd24c7aa04f24c69896a1f8dae76427f45d6d30b6a4fad8a621d08f224', {
             method: 'POST',
@@ -654,6 +655,7 @@
         show(0);
     })();
     </script>
+    <script src="bienvenue.js" defer></script>
 </body>
 
 </html>

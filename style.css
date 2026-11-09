@@ -526,3 +526,72 @@ a{color:#d4b06a}
 @media screen and (min-width:768px) and (max-width:1024px){.logo{height:38px;min-height:0;max-height:none}}
 @media screen and (max-width:767.98px){.logo,.logo:hover{height:34px;transform:none}}
 .faq-section h2{color:#fff}
+
+/* ==========================================================================
+   Offre de bienvenue -15 % : pop-up + bandeau des formulaires (bienvenue.js)
+   ========================================================================== */
+html.adt-bv-bloque{overflow:hidden}
+.adt-bv{position:fixed;inset:0;z-index:10000;display:flex;align-items:center;justify-content:center;padding:20px;font-family:'Montserrat',sans-serif}
+.adt-bv[hidden]{display:none}
+.adt-bv p{margin:0;padding:0;background:none;word-spacing:normal}
+.adt-bv-carte:focus{outline:none}
+.adt-bv-fond{position:absolute;inset:0;background:rgba(0,0,0,.66);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);opacity:0;transition:opacity .35s ease}
+.adt-bv-carte{position:relative;display:grid;grid-template-columns:minmax(0,42%) minmax(0,58%);width:min(860px,100%);max-height:calc(100vh - 40px);overflow:hidden;border-radius:24px;background:linear-gradient(160deg,#171717 0%,#0a0a0a 55%,#121212 100%);border:1px solid rgba(201,162,78,.45);box-shadow:0 30px 80px rgba(0,0,0,.6),inset 0 0 0 1px rgba(255,255,255,.03);color:#fff;opacity:0;transform:translateY(18px) scale(.97);transition:opacity .35s ease,transform .4s cubic-bezier(.2,.8,.2,1)}
+.adt-bv-ouvert .adt-bv-fond{opacity:1}
+.adt-bv-ouvert .adt-bv-carte{opacity:1;transform:none}
+.adt-bv-visuel{position:relative;min-height:100%;background:#0a0a0a}
+.adt-bv-visuel img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:28% 62%}
+.adt-bv-visuel::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,10,10,0) 50%,rgba(10,10,10,.9) 100%),linear-gradient(0deg,rgba(10,10,10,.45) 0%,rgba(10,10,10,0) 45%)}
+.adt-bv-corps{position:relative;display:flex;flex-direction:column;align-items:center;text-align:center;padding:34px 40px 24px;overflow-y:auto}
+.adt-bv-logo{width:150px;height:auto;margin-bottom:14px}
+.adt-bv .adt-bv-sur{font-size:12px;font-weight:600;letter-spacing:.32em;text-transform:uppercase;color:#e3c27a}
+.adt-bv .adt-bv-remise{display:flex;align-items:flex-start;margin:6px 0 2px;font-size:96px;font-weight:700;line-height:1;letter-spacing:-2px;background:linear-gradient(135deg,#f5e2a8 0%,#d4b06a 38%,#b8913e 66%,#e3c27a 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.adt-bv-moins{font-weight:500;margin-right:3px}
+.adt-bv-pct{font-size:.45em;margin:.16em 0 0 5px}
+.adt-bv .adt-bv-pour{font-size:20px;font-weight:600;color:#fff;letter-spacing:.02em}
+.adt-bv-filet{display:block;width:56px;height:2px;margin:16px auto;background:linear-gradient(90deg,transparent,#c9a24e,transparent)}
+.adt-bv .adt-bv-texte{max-width:360px;font-size:15px;line-height:1.6;color:rgba(255,255,255,.74)}
+.adt-bv-code{display:flex;align-items:center;gap:12px;margin:20px 0 18px;padding:9px 9px 9px 16px;border:1.5px dashed rgba(227,194,122,.7);border-radius:14px;background:rgba(201,162,78,.08)}
+.adt-bv-code-lib{font-size:11px;letter-spacing:.14em;text-transform:uppercase;white-space:nowrap;color:rgba(255,255,255,.55)}
+.adt-bv .adt-bv-code-val{font-size:18px;font-weight:700;letter-spacing:.12em;color:#fff}
+.adt-bv-copier{border:0;border-radius:9px;padding:8px 12px;font:600 12px 'Montserrat',sans-serif;color:#050505;background:#e3c27a;cursor:pointer;transition:background .25s}
+.adt-bv-copier:hover{background:#f0d491}
+.adt-bv .adt-bv-copie{background:#fff}
+.adt-bv-cta{width:100%;max-width:340px;border:0;border-radius:30px;padding:15px 24px;font:700 16px 'Montserrat',sans-serif;letter-spacing:.04em;color:#050505;background:linear-gradient(135deg,#e3c27a 0%,#c9a24e 50%,#9a7630 100%);box-shadow:0 8px 24px rgba(201,162,78,.32);cursor:pointer;transition:transform .25s,box-shadow .25s,filter .25s}
+.adt-bv-cta:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(201,162,78,.5);filter:brightness(1.06)}
+.adt-bv .adt-bv-wa{display:inline-flex;align-items:center;justify-content:center;gap:8px;width:100%;max-width:340px;box-sizing:border-box;margin-top:10px;padding:12px 24px;border:1px solid rgba(255,255,255,.22);border-radius:30px;color:#fff;font-size:14px;font-weight:600;transition:border-color .25s,background .25s}
+.adt-bv-wa svg{width:18px;height:18px;fill:#25d366}
+.adt-bv .adt-bv-wa:hover{border-color:#25d366;background:rgba(37,211,102,.08)}
+.adt-bv-non{margin-top:12px;border:0;background:none;color:rgba(255,255,255,.5);font:500 13px 'Montserrat',sans-serif;text-decoration:underline;text-underline-offset:3px;cursor:pointer}
+.adt-bv-non:hover{color:#fff}
+.adt-bv .adt-bv-cond{margin-top:12px;font-size:11px;line-height:1.5;color:rgba(255,255,255,.4)}
+.adt-bv .adt-bv-cond a{color:rgba(227,194,122,.85);font-weight:500;text-decoration:underline}
+.adt-bv-x{position:absolute;top:12px;right:14px;z-index:2;width:36px;height:36px;padding:0;border:0;border-radius:50%;background:rgba(255,255,255,.08);color:#fff;font-size:24px;line-height:36px;cursor:pointer;transition:background .25s,transform .25s}
+.adt-bv-x:hover{background:rgba(255,255,255,.18);transform:rotate(90deg)}
+.adt-bv button:focus-visible,.adt-bv a:focus-visible{outline:2px solid #e3c27a;outline-offset:3px}
+@media screen and (max-width:767.98px){
+.adt-bv{align-items:flex-end;padding:0}
+.adt-bv-carte{grid-template-columns:1fr;grid-template-rows:auto minmax(0,1fr);width:100%;max-height:92vh;max-height:92dvh;border-radius:24px 24px 0 0;border-bottom:0;transform:translateY(100%)}
+.adt-bv-ouvert .adt-bv-carte{transform:none}
+.adt-bv-visuel{height:128px;min-height:0}
+.adt-bv-visuel img{object-position:50% 64%}
+.adt-bv-visuel::after{background:linear-gradient(180deg,rgba(10,10,10,.05) 0%,rgba(10,10,10,.96) 100%)}
+.adt-bv-corps{margin-top:-48px;padding:0 22px calc(18px + env(safe-area-inset-bottom))}
+.adt-bv-logo{width:118px;margin-bottom:8px}
+.adt-bv .adt-bv-remise{font-size:74px}
+.adt-bv .adt-bv-pour{font-size:17px}
+.adt-bv-filet{margin:12px auto}
+.adt-bv .adt-bv-texte{font-size:14px}
+.adt-bv-code{margin:14px 0;gap:10px;padding-left:12px}
+.adt-bv-code-lib{font-size:10px;letter-spacing:.08em}
+.adt-bv .adt-bv-code-val{font-size:16px;letter-spacing:.08em}
+.adt-bv-x{top:10px;right:10px;background:rgba(0,0,0,.5)}
+}
+@media (prefers-reduced-motion:reduce){.adt-bv-fond,.adt-bv-carte{transition:none}}
+.form-container .adt-bv-bandeau{display:flex;align-items:center;gap:12px;margin:0 0 20px;padding:12px 14px;border:1px solid rgba(227,194,122,.38);border-radius:14px;background:linear-gradient(135deg,rgba(227,194,122,.13) 0%,rgba(201,162,78,.04) 100%);font-size:14px;line-height:1.45;color:#e2e2e2;text-align:left}
+.adt-bv-bandeau strong{color:#e3c27a}
+.adt-bv-bandeau em{font-style:normal;font-size:12px;color:rgba(255,255,255,.55);white-space:nowrap}
+.adt-bv-bandeau-pct,.adt-bv-bandeau-ico{flex:0 0 auto;display:inline-flex;align-items:center;justify-content:center;width:46px;height:46px;border-radius:50%;background:linear-gradient(135deg,#e3c27a,#9a7630);color:#050505;font-size:13px;font-weight:700}
+.adt-bv-bandeau-ico{font-size:20px}
+.form-container .adt-bv-bandeau .adt-bv-activer{display:inline;margin:0;padding:0;border:0;border-radius:0;background:none;color:#e3c27a;font:700 14px 'Montserrat',sans-serif;text-decoration:underline;text-underline-offset:3px;cursor:pointer}
+.form-container .adt-bv-bandeau .adt-bv-activer:hover{background:none;color:#fff}
